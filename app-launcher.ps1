@@ -73,7 +73,7 @@ if (!(Test-Path $localPath)) {
     Write-Host "Created Directory: $localPath"
 }
 
-# clean up folder on userprofile
+# clean up folder on userprofile / housekeeping / optional
 $removeFileTypes = @("*.jpg", "*.copied", "*.bat", "*.ps1")
 foreach ($file in $removeFileTypes) {
     Get-ChildItem -Path $localPath -Filter $file -ErrorAction SilentlyContinue |

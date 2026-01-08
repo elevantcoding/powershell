@@ -139,7 +139,7 @@ if ($sourceFile -and (!$localFile -or $sourceFile.Name -ne $localFile.Name)) {
             Start-Process -FilePath $localFileCopy
             Exit
         } else {
-        [System.Windows.Forms.MessageBox]::Show("File copy did not succeed after multiple attempts.  Exiting.", "GBLDB Launcher",
+        [System.Windows.Forms.MessageBox]::Show("File copy did not succeed after multiple attempts.  Exiting.", "App Launcher",
         [System.Windows.Forms.MessageBoxButtons]::OK,
         [System.Windows.Forms.MessageBoxIcon]::Exclamation)
         Exit
@@ -147,7 +147,7 @@ if ($sourceFile -and (!$localFile -or $sourceFile.Name -ne $localFile.Name)) {
 }
 
 If (-not $sourceFile -and -not $localFile) {
-    [System.Windows.Forms.MessageBox]::Show("No source or local .accde file available.  Exiting.","GBLDB Launcher",
+    [System.Windows.Forms.MessageBox]::Show("No source or local .accde file available.  Exiting.","App Launcher",
     [System.Windows.Forms.MessageBoxButtons]::OK,
     [System.Windows.Forms.MessageBoxIcon]::Exclamation)
     Exit

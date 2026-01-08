@@ -1,4 +1,4 @@
 # powershell
 Launch Script
 
-This script was created to address intermittent file corruption observed during application distribution over VPN and unstable network connections. Traditional file copy methods occasionally produced incomplete or corrupted binaries due to packet loss. To eliminate silent failure, this solution implements streaming copy with cryptographic verification and automatic retry protection before execution.
+This launcher was originally developed to support the deployment of a compiled Microsoft Access application (.accde) across multiple user environments. The script identifies the most recent build, verifies its integrity using SHA-256 hashing, safely transfers the file over potentially unstable network connections, and launches a verified local copy. While the initial use case involved Access application distribution, the underlying design is application-agnostic and applicable to any binary or packaged deployment scenario.
